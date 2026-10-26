@@ -1,0 +1,24 @@
+[package]
+name = "stellar"
+version = "0.1.0"
+description = "STELLAR launcher shell"
+edition = "2021"
+default-run = "stellar"
+
+# The shell has no wasm target; keep the build lean.
+[lib]
+name = "stellar_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+cas-core-rs = { path = "../../../packages/cas-core-rs" }
+
+[profile.release]
+incremental = true
+codegen-units = 8

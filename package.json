@@ -1,0 +1,20 @@
+{
+  "name": "platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PC-first game platform - M0 protocol spike (content-addressed game delivery)",
+  "engines": { "node": ">=22.15" },
+  "scripts": {
+    "test": "node --no-warnings --test tests/*.test.mjs",
+    "demo": "node --no-warnings tools/demo.mjs",
+    "cas": "node --no-warnings tools/cas.mjs",
+    "vectors": "node --no-warnings tools/gen-vectors.mjs",
+    "serve:dev": "node --no-warnings tools/cas.mjs serve packages/cas-core-rs/tests/fixtures/repo --port 8787 --catalog server/catalog.json",
+    "dev:ui": "npm run dev --prefix apps/launcher",
+    "build:ui": "npm run build --prefix apps/launcher",
+    "check:ui": "npm run typecheck --prefix apps/launcher",
+    "test:rs": "%USERPROFILE%\\.cargo\\bin\\cargo.exe test --manifest-path packages/cas-core-rs/Cargo.toml",
+    "check:rs": "%USERPROFILE%\\.cargo\\bin\\cargo.exe check --manifest-path apps/launcher/src-tauri/Cargo.toml"
+  }
+}

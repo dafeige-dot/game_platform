@@ -1,0 +1,14 @@
+cas — platform delivery protocol reference CLI
+
+  cas keygen [--out .keys] [--force]
+  cas pack <dir> --app <id> --version <v> --platform <p> --out <repo> --key <private.pem>
+           [--build <buildId>] [--entry <relative/path>]
+  cas serve <repo> [--port 8787] [--host 127.0.0.1] [--fail-rate 0.2]
+  cas install <app> --server <url> --dest <dir> [--build latest] [--store .cache/cas] [--pub public.pem]
+  cas verify <dest> --app <id> --server <url> [--build latest]
+  cas gc [--store .cache/cas]
+  cas info <repo>
+
+platforms:
+  windows-x86_64  windows-arm64  macos-arm64  macos-x86_64
+  linux-x86_64    android-arm64-v8a  android-x86_64

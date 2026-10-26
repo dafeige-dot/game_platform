@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "generator": "tools/gen-vectors.mjs",
+  "note": "PRNG: x = (x*1664525+1013904223)>>>0; byte = x>>>24",
+  "gear": {
+    "seed": 2654435769,
+    "min": 262144,
+    "normal": 1048576,
+    "max": 4194304,
+    "maskS": 2097151,
+    "maskL": 524287
+  },
+  "pubRawHex": "6e52afcbb600ca76a631d535ada3ca0549522ae82f1755c11b63208ff5c80de2",
+  "keyId": "aa0b12768e22c5b18978a26b73740555",
+  "datasets": [
+    {
+      "name": "random-sma11",
+      "parts": [
+        [
+          4711,
+          262000
+        ]
+      ],
+      "size": 262000,
+      "sha256": "3829a9bc44f83377250ce86dbad8ef9e9aaf53152791dff9745e5101fac72162",
+      "chunks": [
+        [
+          0,
+          262000
+        ]
+      ]
+    },
+    {
+      "name": "random-3m",
+      "parts": [
+        [
+          7,
+          3146505
+        ]
+      ],
+      "size": 3146505,
+      "sha256": "1dae33cb17824186420711606b2046735e0c9cfcab2875664bc4f97d570296e9",
+      "chunks": [
+        [
+          0,
+          2183372
+        ],
+        [
+          2183372,
+          963133
+        ]
+      ]
+    },
+    {
+      "name": "random-8k-pages",
+      "parts": [
+        [
+          20261026,
+          8388608
+        ]
+      ],
+      "size": 8388608,
+      "sha256": "f403871cc84290b01e0d699e3a9f960539348739324c369d7c2318e65688165f",
+      "chunks": [
+        [
+          0,
+          991044
+        ],
+        [
+          991044,
+          2300120
+        ],
+        [
+          3291164,
+          2468702
+        ],
+        [
+          5759866,
+          1569285
+        ],
+        [
+          7329151,
+          593561
+        ],
+        [
+          7922712,
+          465896
+        ]
+      ]
+    },
+    {
+      "name": "prefix-4k-shift",
+      "parts": [
+        [
+          99,
+          4000
+        ],
+        [
+          20261026,
+          8388608
+        ]
+      ],
+      "size": 8392608,
+      "sha256": "b568016c39e243a9b7467445b2f9e8b5ff85d2ca3a3287044c945d7ac9ae05cc",
+      "chunks": [
+        [
+          0,
+          995044
+        ],
+        [
+          995044,
+          2300120
+        ],
+        [
+          3295164,
+          2468702
+        ],
+        [
+          5763866,
+          1569285
+        ],
+        [
+          7333151,
+          593561
+        ],
+        [
+          7926712,
+          465896
+        ]
+      ],
+      "note": "random-8k-pages body behind a 4000 B prefix (seed 99)"
+    }
+  ],
+  "manifest": {
+    "appId": "1001",
+    "buildId": "v1.0.0-b1",
+    "version": "1.0.0",
+    "platform": "windows-x86_64",
+    "totalSize": 8738829,
+    "wireSize": 8650830,
+    "entries": [
+      "bin/game.exe",
+      "config.json",
+      "data/assets.pak",
+      "data/locale/zh_cn.bin"
+    ],
+    "chunkCount": 11
+  }
+}

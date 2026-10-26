@@ -1,0 +1,18 @@
+[package]
+name = "cas-core-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Rust port of the platform delivery protocol core; cross-validated against the Node reference via tests/fixtures"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+hex = "0.4"
+zstd = "0.13"
+ed25519-dalek = "2"
+base64 = "0.23"
+thiserror = "2"
+rusqlite = { version = "0.32", features = ["bundled"] }
+ureq = { version = "2", default-features = false, features = ["tls"] }
+
